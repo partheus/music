@@ -34,7 +34,7 @@ export default {
       hideScrollbar: true
     });
 
-    this.wavesurfer.load(require('@/assets/synthpop.wav'));
+    this.wavesurfer.load(require('@/assets/tracks/bday.wav'));
 
     this.wavesurfer.on('play', () => {
       this.playing = true;
