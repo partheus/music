@@ -12,21 +12,20 @@
 
   <div id="app">
     <router-view/>
-    <audio-player></audio-player>
+<!--    <audio-player></audio-player>-->
     <persistent-player />
   </div>
 
 </template>
 
 <script>
-import AudioPlayer from "@/components/AudioPlayer.vue";
+// import AudioPlayer from "@/components/AudioPlayer.vue";
 import PersistentPlayer from "@/components/PersistentPlayer.vue";
 
 export default {
   name: 'App',
   components: {
-    PersistentPlayer,
-    AudioPlayer
+    PersistentPlayer
   }
 }
 </script>
