@@ -49,40 +49,5 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 2em;
-  font-size: 120%;
-}
-
-/* Add styling for your navigation menu here */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: auto;
-  display: flex;
-  column-gap: 2em;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 120%;
-  max-width: 60vw;
-}
-
-/* Additional styles can go here */
-.volume-control {
-  text-align: center; /* Center the slider if needed */
-  padding: 1em;
-}
-
-/* You can style the slider here */
-#volume-slider[type="range"] {
-  /* Slider styling */
-  width: 180px;
-  margin: 1em;
-}
 
 </style>
