@@ -1,7 +1,6 @@
 <template>
   <footer class="persistent-player">
     <div v-if="currentTrack" class="track-info">
-
       <img :src="currentTrack.cover" alt="Track cover" class="track-cover">
       <div class="track-details">
         <h4>{{ currentTrack.title }}</h4>
@@ -11,7 +10,6 @@
     <div v-else class="no-track">
       Select a track to play!
     </div>
-
 
     <!-- Audio Player Controls -->
     <div class="controls">
@@ -77,10 +75,9 @@ export default {
       if (newTrack) {
         this.setTrack(newTrack);
       } else {
-        this.audio.pause();
-        this.isPlaying = false;
+        this.resetPlayer(); // This should stop the audio and clear state
       }
-    }, {immediate: true});
+    }, { immediate: true });
     this.audio.addEventListener('timeupdate', this.updateTime);
   },
   beforeUnmount() {
@@ -108,6 +105,14 @@ export default {
 
       // Other methods you have very likely remain the same...
     },
+    resetPlayer() {
+      if (this.audio) {
+        this.audio.pause();
+        this.audio.currentTime = 0;
+        this.isPlaying = false;
+      }
+      this.currentTrack = null; // Clear the track info
+    },
     playPause() {
       if (this.isPlaying) {
         this.audio.pause();
@@ -118,10 +123,6 @@ export default {
     },
     updateTime() {
       this.currentTime = this.audio.currentTime;
-    },
-    resetPlayer() {
-      this.isPlaying = false;
-      this.currentTime = 0;
     },
     seek(event) {
       const time = event.target.value;
@@ -138,11 +139,13 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #39cfff;
+  background-color: rgba(124, 197, 220, 0.88);
   color: black;
-  padding: 2em;
+  padding: 1em;
   display: flex;
+  height: fit-content;
   align-items: center;
+  flex-direction: column;
 }
 
 .track-info {
@@ -151,8 +154,8 @@ export default {
 }
 
 .track-cover {
-  width: 60px;
-  height: 60px;
+  width: 5em;
+  height: 2em;
   object-fit: cover;
   margin-right: 16px;
 }
@@ -164,7 +167,7 @@ export default {
 }
 
 .controls {
-  margin-left: auto;
+  margin-top: 0.5em;
   display: flex;
   align-items: center;
 }
