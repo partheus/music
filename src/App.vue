@@ -1,6 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <nav>
+      <ul>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/remixes">Remixed Music</router-link></li>
+        <li><router-link to="/originals">Original Music</router-link></li>
+        <!-- Add more navigation links as needed -->
+      </ul>
+    </nav>
+  </div>
+
   <div id="app">
     <audio-player></audio-player>
   </div>
@@ -28,4 +37,16 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+/* Add styling for your navigation menu here */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 10px;
+}
+
 </style>
