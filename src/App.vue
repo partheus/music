@@ -3,8 +3,8 @@
     <nav>
       <ul>
         <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/remixes">Remixed Music</router-link></li>
-        <li><router-link to="/originals">Original Music</router-link></li>
+        <li><router-link to="/originals">Originals</router-link></li>
+        <li><router-link to="/remixes">Remixes</router-link></li>
         <!-- Add more navigation links as needed -->
       </ul>
     </nav>
@@ -55,7 +55,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 2em;
   font-size: 120%;
 }
 
@@ -63,17 +63,20 @@ export default {
 nav ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav li {
-  display: inline;
-  margin-right: 10px;
+  margin: auto;
+  display: flex;
+  column-gap: 2em;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 120%;
+  max-width: 60vw;
 }
 
 /* Additional styles can go here */
 .volume-control {
   text-align: center; /* Center the slider if needed */
-  padding: 10px;
+  padding: 1em;
+  margin-top: 1em;
 }
 
 /* You can style the slider here */
