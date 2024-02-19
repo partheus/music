@@ -18,7 +18,14 @@
       <button @click="playPause">
         <img :src="isPlaying ? pauseIcon : playIcon" alt="Play/Pause">
       </button>
-      <input type="range" min="0" :max="duration" v-model="currentTime" @input="seek">
+      <input type="range"
+             min="0"
+             :max="duration"
+             v-model="currentTime"
+             @input="seek"
+             @change="seek"
+             class="seek-bar"
+      />
     </div>
 
 
@@ -29,6 +36,8 @@
 <script>
 import playIcon from '@/assets/play-buttton.png';
 import pauseIcon from '@/assets/pause.png';
+import EventBus from '@/event-bus';
+
 export default {
   name: 'PersistentPlayer',
   data() {
@@ -41,7 +50,7 @@ export default {
         title: 'Sample Track',
         artist: 'Artist Name',
         cover: require('@/assets/album-art.png'),
-        src: require('@/assets/synthpop.wav')
+        src: require('@/assets/tracks/bday.wav')
       },
       playIcon,
       pauseIcon
@@ -49,12 +58,18 @@ export default {
   },
   mounted() {
     // Set up audio element events
-    this.audio.src = this.currentTrack.src;
+    // Watch for changes on the currentTrack reactive property
+    const state = EventBus.getState();
+    this.$watch(() => state.currentTrack, (newTrack) => {
+      this.currentTrack = newTrack; // The current track is now updated
+      if (newTrack) {
+        this.setTrack(newTrack);
+      } else {
+        this.audio.pause();
+        this.isPlaying = false;
+      }
+    }, {immediate: true});
     this.audio.addEventListener('timeupdate', this.updateTime);
-    this.audio.addEventListener('ended', this.resetPlayer);
-    this.audio.addEventListener('loadedmetadata', () => {
-      this.duration = this.audio.duration;
-    });
   },
   beforeUnmount() {
     // Remove event listeners
@@ -62,6 +77,25 @@ export default {
     this.audio.removeEventListener('ended', this.resetPlayer);
   },
   methods: {
+    setTrack(track) {
+      this.audio.src = track.src;
+      this.audio.load();  // necessary to apply the new source
+      this.audio.play();
+      this.isPlaying = true;
+
+      // Set the duration once the metadata is loaded
+      this.audio.onloadedmetadata = () => {
+        this.duration = this.audio.duration;
+      };
+
+      // Reset the time when the audio ends
+      this.audio.onended = () => {
+        this.currentTime = 0;
+        this.isPlaying = false;
+      };
+
+      // Other methods you have very likely remain the same...
+    },
     playPause() {
       if (this.isPlaying) {
         this.audio.pause();
@@ -135,5 +169,12 @@ button img {
 
 input[type="range"] {
   margin-left: 16px;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: pink; /* Color of the thumb */
+  /* ... other styles such as width, height, etc. ... */
 }
 </style>
