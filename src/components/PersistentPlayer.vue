@@ -40,6 +40,17 @@ import EventBus from '@/event-bus';
 
 export default {
   name: 'PersistentPlayer',
+  props: {
+    volume: {
+      type: Number,
+      default: 0.3
+    }
+  },
+  watch: {
+    volume(newVolume) {
+      this.audio.volume = newVolume;
+    }
+  },
   data() {
     return {
       isPlaying: false,
@@ -58,6 +69,7 @@ export default {
   },
   mounted() {
     // Set up audio element events
+    this.audio.volume = this.volume;
     // Watch for changes on the currentTrack reactive property
     const state = EventBus.getState();
     this.$watch(() => state.currentTrack, (newTrack) => {
@@ -126,9 +138,9 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #333;
-  color: white;
-  padding: 16px;
+  background-color: #39cfff;
+  color: black;
+  padding: 2em;
   display: flex;
   align-items: center;
 }
@@ -148,6 +160,7 @@ export default {
 .track-details h4,
 .track-details p {
   margin: 0;
+  text-align: left;
 }
 
 .controls {
@@ -168,7 +181,7 @@ button img {
 }
 
 input[type="range"] {
-  margin-left: 16px;
+  margin-left: 1em;
 }
 
 .seek-bar::-webkit-slider-thumb {
