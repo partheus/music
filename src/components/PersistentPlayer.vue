@@ -19,6 +19,7 @@
       <input type="range"
              min="0"
              :max="duration"
+             step="0.1"
              v-model="currentTime"
              @input="seek"
              @change="seek"
@@ -133,75 +134,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.persistent-player {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(124, 197, 220, 0.88);
-  color: black;
-  padding: 1em;
-  display: flex;
-  height: fit-content;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-
-.track-info {
-  display: flex;
-  align-items: center;
-}
-
-.track-cover {
-  width: 5em;
-  height: 2em;
-  object-fit: cover;
-  margin-right: 16px;
-}
-
-.track-details h4,
-.track-details p {
-  margin: 0;
-  text-align: left;
-}
-
-.controls {
-  margin-top: 0.5em;
-  display: flex;
-  align-items: center;
-  padding: 0 1em;
-
-  @media (min-width: 768px) {
-    padding: 0 2em;
-  }
-}
-
-.no-track {
-  text-align: left;
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-button img {
-  width: 32px;
-  height: 32px;
-}
-
-#seek-bar[type="range"] {
-  margin-left: 1em;
-  width: 100%;
-}
-
-.seek-bar::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  background: pink; /* Color of the thumb */
-  /* ... other styles such as width, height, etc. ... */
-}
-</style>
