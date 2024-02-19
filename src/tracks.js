@@ -2,7 +2,7 @@
 const trackData = [
     {
         id: 1,
-        title: 'Test',
+        title: 'daft.wav',
         artist: 'htrap',
         filename: 'daft.wav',
         // You can require cover images here as webpack processes them fine statically
@@ -11,12 +11,36 @@ const trackData = [
     },
     {
         id: 2,
-        title: 'Evening Groove',
+        title: 'funkjam.wav',
         artist: 'htrap',
         filename: 'funkjam.wav',
         cover: require('@/assets/album-art.png'),
         type: 'original'
     },
+    {
+        id: 3,
+        title: 'jazz.wav',
+        artist: 'htrap',
+        filename: 'bday.wav',
+        cover: require('@/assets/album-art.png'),
+        type: 'original'
+    },
+    {
+        id: 4,
+        title: 'synthpop.wav',
+        artist: 'htrap',
+        filename: 'synthpop.wav',
+        cover: require('@/assets/album-art.png'),
+        type: 'original'
+    },
+    {
+        id: 5,
+        title: 'janglebop.wav',
+        artist: 'htrap',
+        filename: 'janglebop.wav',
+        cover: require('@/assets/album-art.png'),
+        type: 'original'
+    }
     // ... Add more tracks as needed
 ];
 
