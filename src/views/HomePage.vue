@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>hehehehehe</h1>
-    <audio-player></audio-player>
+    <h1>musique</h1>
+    <p>Navigate to the pages and play some music</p>
     <!-- Other content for Home page -->
   </div>
 </template>
