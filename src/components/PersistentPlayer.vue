@@ -23,6 +23,7 @@
              @input="seek"
              @change="seek"
              class="seek-bar"
+             id="seek-bar"
       />
     </div>
 
@@ -144,7 +145,7 @@ export default {
   padding: 1em;
   display: flex;
   height: fit-content;
-  align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
 }
 
@@ -170,6 +171,15 @@ export default {
   margin-top: 0.5em;
   display: flex;
   align-items: center;
+  padding: 0 1em;
+
+  @media (min-width: 768px) {
+    padding: 0 2em;
+  }
+}
+
+.no-track {
+  text-align: left;
 }
 
 button {
@@ -183,8 +193,9 @@ button img {
   height: 32px;
 }
 
-input[type="range"] {
+#seek-bar[type="range"] {
   margin-left: 1em;
+  width: 100%;
 }
 
 .seek-bar::-webkit-slider-thumb {

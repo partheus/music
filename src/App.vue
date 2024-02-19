@@ -14,7 +14,7 @@
     <!-- Volume Control Slider -->
     <div class="volume-control">
       <label for="volume-slider">Volume:</label>
-      <input type="range" id="volume-slider" min="0" max="1" step="0.01"
+      <input type="range" width="200px" id="volume-slider" min="0" max="1" step="0.01"
              v-model="volume" @input="adjustVolume" />
     </div>
   </header>
@@ -76,14 +76,13 @@ nav ul {
 .volume-control {
   text-align: center; /* Center the slider if needed */
   padding: 1em;
-  margin-top: 1em;
 }
 
 /* You can style the slider here */
-input[type="range"] {
+#volume-slider[type="range"] {
   /* Slider styling */
-  width: 100px;
-  margin: 0 10px;
+  width: 180px;
+  margin: 1em;
 }
 
 </style>
