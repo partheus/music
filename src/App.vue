@@ -11,8 +11,8 @@
   </div>
 
   <div id="app">
-    <audio-player></audio-player>
     <router-view/>
+    <audio-player></audio-player>
     <persistent-player />
   </div>
 
