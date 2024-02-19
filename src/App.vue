@@ -12,17 +12,20 @@
 
   <div id="app">
     <audio-player></audio-player>
+    <router-view/>
+    <persistent-player />
   </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import AudioPlayer from './components/AudioPlayer.vue'
+import AudioPlayer from "@/components/AudioPlayer.vue";
+import PersistentPlayer from "@/components/PersistentPlayer.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    PersistentPlayer,
     AudioPlayer
   }
 }
