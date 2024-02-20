@@ -14,7 +14,7 @@ const trackData = [
         title: 'funkjam.wav',
         artist: 'htrap',
         filename: 'funkjam.wav',
-        cover: require('@/assets/album-art.png'),
+        cover: require('@/assets/album-art/9e8e9e.png'),
         type: 'original'
     },
     {
@@ -22,7 +22,7 @@ const trackData = [
         title: 'jazz.wav',
         artist: 'htrap',
         filename: 'bday.wav',
-        cover: require('@/assets/album-art.png'),
+        cover: require('@/assets/album-art/520b22.png'),
         type: 'original'
     },
     {
@@ -30,7 +30,7 @@ const trackData = [
         title: 'synthpop.wav',
         artist: 'htrap',
         filename: 'synthpop.wav',
-        cover: require('@/assets/album-art.png'),
+        cover: require('@/assets/album-art/520b51.png'),
         type: 'original'
     },
     {
@@ -38,7 +38,7 @@ const trackData = [
         title: 'janglebop.wav',
         artist: 'htrap',
         filename: 'janglebop.wav',
-        cover: require('@/assets/album-art.png'),
+        cover: require('@/assets/album-art/f095f0.png'),
         type: 'original'
     }
     // ... Add more tracks as needed
