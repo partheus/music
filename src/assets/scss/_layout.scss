@@ -2,66 +2,70 @@
 
 .music-container {
   .track-list {
+    display: grid;
+    grid-template-columns: 1fr; // Start with a single column
+    gap: 2em; // Add some space between the grid items
     list-style: none;
-    padding: 1em;
-    margin: 20px auto; /* Adjust top and bottom margins as needed */
-    height: 40vh; /* Adjust based on the desired fraction of the viewport height */
-    overflow-y: auto; /* Show scrollbar only when necessary */
-    border: 2px solid $color--dark;
-    border-radius: 0.5em;
+    margin: 20px auto;
+    height: auto; // Adjust if you want a scrolling list or full-height
+    overflow-y: auto; // Only show scrollbar if the content overflows
+    padding: 0.5em;
 
     @media (min-width: 768px) {
-      max-width: 60vw; /* Adjust based on the desired width */
+      // Define two columns above 768px
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 80vw;
     }
+
+    @media (min-width: 1100px) {
+      // Define three columns above 1100px
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    // Continue with additional breakpoints as needed
   }
 
   .track-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
+    background: $color--light; // Adjust if you have a specific color or pattern in mind
     cursor: pointer;
     transition: all 0.3s ease;
-    background: $color--light 50% 50% / cover no-repeat;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.124);
-    padding: 1em 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1em;
     border-radius: 0.5em;
-    font-size: 70%;
-  }
-
-  .track-item:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.32);
-  }
-
-  .track-cover {
-    width: 5em;
-    height: 5em;
-    object-fit: cover;
-    margin-right: 1rem;
-    border-radius: 50%;
-  }
-
-  .track-info {
+    text-align: left;
     display: flex;
     align-items: center;
-  }
+    min-height: 200px; // Adjust as needed
+    // Since we're using grid, we don't need margin-bottom for the items
 
-  .track-details h3 {
-    margin: 0;
-    color: #333;
-    font-weight: bold;
-
-    @media (min-width: 768px) {
-      font-size: 1.5rem;
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
   }
 
-  .track-details p {
-    margin: 0;
-    color: #666;
-    font-size: 1.25rem;
+  .track-cover {
+    width: 180px; // Specific size for cover images; adjust as needed
+    height: 80px; // Make equal to width for a square aspect ratio
+    object-fit: cover;
+    margin-right: 1em;
   }
 
   .track-details {
-    text-align: left;
+    // Keep your text styles here
+
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h3 {
+      color: $color--dark;
+      font-weight: bold;
+    }
+
+    p {
+      color: $color--secondary; // Enforce a consistent color for the artist name
+      font-size: 1rem; // Keep the font size consistent
+    }
   }
 }
