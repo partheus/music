@@ -2,7 +2,7 @@
   <div class="not-found">
     <h1>404</h1>
     <img class="not-found-image" src="@/assets/notfound.png" alt="Not Found"/>
-    <router-link to="/">Go Back Home</router-link>
+    That page wasn't found! <router-link to="/">Go Back Home</router-link>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
 
 .not-found-image {
   display: block;
-  margin: auto;
+  margin: 0 auto 1em;
   width: auto;
   max-height: 40vh;
 }
