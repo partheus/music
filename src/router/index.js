@@ -41,6 +41,9 @@ const routes = [
         path: '/:catchAll(.*)*', // This will match all routes that are not matched by other route records
         name: 'NotFound',
         component: NotFound,
+        meta: {
+            title: 'Oops! Page not found | hTrap',
+        },
     }
     // Add other route objects here
 ];
