@@ -40,6 +40,14 @@ const trackData = [
         filename: 'janglebop.wav',
         cover: require('@/assets/album-art/f095f0.png'),
         type: 'original'
+    },
+    {
+        id: 6,
+        title: 'wavy.wav',
+        artist: 'htrap',
+        filename: 'wavyexport.wav',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'original'
     }
     // ... Add more tracks as needed
 ];
