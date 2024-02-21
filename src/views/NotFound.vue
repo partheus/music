@@ -11,26 +11,3 @@ export default {
   name: 'NotFound',
 };
 </script>
-
-<style>
-/* Style as needed */
-.not-found {
-  text-align: center;
-}
-
-.not-found-image {
-  display: block;
-  margin: 0 auto 1em;
-  width: auto;
-  max-height: 40vh;
-}
-
-.not-found h1 {
-  font-size: 4em;
-  margin: 0;
-}
-
-.not-found p {
-  font-size: 2em;
-}
-</style>
