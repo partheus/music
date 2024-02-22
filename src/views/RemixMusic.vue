@@ -1,8 +1,7 @@
 <template>
   <div class="music-container">
     <h2>Remix Music</h2>
-    <p>Coming soon!</p>
-    <ul>
+    <ul class="track-list">
       <li v-for="track in tracks" :key="track.id" @click="selectTrack(track)" class="track-item">
         <div class="track-info">
           <img :src="track.cover" :alt="`${track.title} cover`" class="track-cover">
