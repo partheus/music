@@ -48,7 +48,32 @@ const trackData = [
         filename: 'wavyexport.wav',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original'
+    },
+    {
+        id: 7,
+        title: 'chronic.wav',
+        artist: 'htrap',
+        filename: 'chronic.wav (carti)',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'remix'
+    },
+    {
+        id: 8,
+        title: 'ports.wav',
+        artist: 'htrap',
+        filename: 'ports.wav (carti x teen x)',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'remix'
+    },
+    {
+        id: 9,
+        title: 'mountain dew.wav',
+        artist: 'htrap',
+        filename: 'mountain dew.wav (lil dicky)',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'remix'
     }
+
     // ... Add more tracks as needed
 ];
 
