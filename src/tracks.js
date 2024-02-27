@@ -51,25 +51,25 @@ const trackData = [
     },
     {
         id: 7,
-        title: 'chronic.wav',
+        title: 'chronic.wav (playboi carti remix)',
         artist: 'htrap',
-        filename: 'chronic.wav (carti)',
+        filename: 'chronic.wav',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'remix'
     },
     {
         id: 8,
-        title: 'ports.wav',
+        title: 'ports.wav (playboi carti remix)',
         artist: 'htrap',
-        filename: 'ports.wav (carti x teen x)',
+        filename: 'ports.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'remix'
     },
     {
         id: 9,
-        title: 'mountain dew.wav',
+        title: 'mountain dew.wav (lil dicky remix)',
         artist: 'htrap',
-        filename: 'mountain dew.wav (lil dicky)',
+        filename: 'mountainDew.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'remix'
     }
@@ -79,7 +79,10 @@ const trackData = [
 
 // Export a function that returns file source given a filename
 function getTrackSource(filename) {
-    const tracks = require.context('@/assets/tracks/', false, /\.wav$/);
+    // Extract the file extension from the filename
+    filename.split('.').pop().toLowerCase();
+// Adjust the regular expression to match both .wav and .mp3 files
+    const tracks = require.context('@/assets/tracks/', false, /\.(wav|mp3)$/);
     return tracks('./' + filename);
 }
 
