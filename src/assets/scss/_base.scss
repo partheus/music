@@ -53,8 +53,9 @@ nav ul {
   margin: 1em auto 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  column-gap: 1em;
   width: 100%;
 
   a {
@@ -86,7 +87,8 @@ nav ul {
   }
 
   @media (min-width: 768px) {
-    max-width: 45vw;
+    max-width: 55vw;
+    justify-content: space-between;
   }
 }
 
@@ -120,8 +122,9 @@ nav ul {
   }
 
   li {
-    margin: 0.5em 0;
+    margin: 0.5em auto;
     border-left: 7px solid $color--primary;
     padding: 0.25em 0.5em;
+    text-align: left;
   }
 }

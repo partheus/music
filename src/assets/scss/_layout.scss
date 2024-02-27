@@ -28,18 +28,18 @@
   .track-item {
     background: $color--light; // Adjust if you have a specific color or pattern in mind
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 1em;
     border-radius: 0.5em;
     text-align: left;
     display: flex;
-    align-items: center;
-    min-height: 200px; // Adjust as needed
-    // Since we're using grid, we don't need margin-bottom for the items
+    align-items: flex-start;
+    min-height: fit-content;
 
     &:hover {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 11px rgba(0, 0, 0, 0.5);
+      transition: all 0.5s ease;
     }
   }
 
@@ -65,7 +65,7 @@
 
     p {
       color: $color--secondary; // Enforce a consistent color for the artist name
-      font-size: 1rem; // Keep the font size consistent
+      font-size: 1.1rem; // Keep the font size consistent
     }
   }
 }
