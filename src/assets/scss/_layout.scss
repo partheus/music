@@ -48,6 +48,7 @@
     height: 80px; // Make equal to width for a square aspect ratio
     object-fit: cover;
     margin-right: 1em;
+    display: none;
   }
 
   .track-details {
@@ -67,5 +68,12 @@
       color: $color--secondary; // Enforce a consistent color for the artist name
       font-size: 1.1rem; // Keep the font size consistent
     }
+  }
+
+  .currently-playing {
+    background-color: $color--lightpink;
+    color: $color--light;
+    margin-right: 1.5em;
+    filter: contrast(1.2);
   }
 }
