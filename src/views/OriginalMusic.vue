@@ -2,7 +2,9 @@
   <div class="music-container">
     <h2>Original Music</h2>
     <ul class="track-list">
-      <li v-for="track in tracks" :key="track.id" @click="selectTrack(track)" class="track-item">
+      <li v-for="track in tracks" :key="track.id"
+          :class="{ 'currently-playing': track.id === currentlyPlayingId }"
+          @click="selectTrack(track)" class="track-item">
         <div class="track-info">
           <img :src="track.cover" :alt="`${track.title} cover`" class="track-cover">
           <div class="track-details">
@@ -23,11 +25,15 @@ export default {
   name: 'OriginalMusic',
   data() {
     return {
-      tracks: trackData.filter((track) => track.type === 'original')
+      tracks: trackData.filter((track) => track.type === 'original'),
+      currentlyPlayingId: null
     };
   },
   methods: {
     selectTrack(track) {
+      // set ID of the track that is currently playing
+      this.currentlyPlayingId = track.id;
+      // emit the event to the EventBus
       EventBus.setCurrentTrack({
         ...track,
         src: getTrackSource(track.filename)
