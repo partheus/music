@@ -32,7 +32,7 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $color--secondary;
   margin-top: 1em;
   font-size: 126%;
   margin-bottom: 150px;
@@ -51,23 +51,16 @@ nav ul {
   list-style-type: none;
   padding: 0;
   margin: 1em auto 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  column-gap: 1em;
-  width: 100%;
 
   a {
     text-decoration: none;
     font-variant: all-petite-caps;
     font-weight: bold;
-    font-size: 1.25em;
-    padding: 0.25em 0.5em;
-    border: 4px dashed $color--primary;
+    font-size: 1em;
     transition: all 0.4s ease;
     display: flex;
-    margin-bottom: 0.5em;
+    flex-direction: column;
+    width: max-content;
   }
 
   a:hover {
@@ -84,11 +77,6 @@ nav ul {
     background-color: $color--tertiary;
     color: $color--success;
     filter: contrast(1.2);
-  }
-
-  @media (min-width: 768px) {
-    max-width: 55vw;
-    justify-content: space-between;
   }
 }
 
@@ -119,10 +107,15 @@ nav ul {
     justify-content: space-evenly;
     align-items: flex-start;
     width: 100%;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 25vw;
+    }
   }
 
   li {
-    margin: 0.5em auto;
+    margin-bottom: 0.5em;
+    line-height: 1;
     border-left: 7px solid $color--primary;
     padding: 0.25em 0.5em;
     text-align: left;

@@ -12,6 +12,7 @@
   display: flex;
   height: fit-content;
   justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
 
   .track-info {
@@ -33,14 +34,21 @@
     text-align: left;
   }
 
+  .track-details {
+    border-left: 7px solid $color--tertiary;
+    padding-left: 1em;
+    border-right: 7px solid $color--tertiary;
+    padding-right: 1em;
+  }
+
   .controls {
     margin-top: 0.5em;
     display: flex;
     align-items: center;
-    padding: 0 1em;
+    width: 80vw;
 
-    @media (min-width: 768px) {
-      padding: 0 2em;
+    @media screen and (min-width: 768px) {
+      max-width: 55vw;
     }
   }
 
