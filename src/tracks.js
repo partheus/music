@@ -51,7 +51,7 @@ const trackData = [
     },
     {
         id: 7,
-        title: 'chronic.wav (playboi carti remix)',
+        title: 'chronic.wav (asthma - playboi carti remix)',
         artist: 'htrap',
         filename: 'chronic.wav',
         cover: require('@/assets/album-art/ffffff.png'),
@@ -59,7 +59,7 @@ const trackData = [
     },
     {
         id: 8,
-        title: 'ports.wav (playboi carti remix)',
+        title: 'old ports [teen x - playboi carti remix (carti verse only)]',
         artist: 'htrap',
         filename: 'ports.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
@@ -67,12 +67,69 @@ const trackData = [
     },
     {
         id: 9,
-        title: 'mountain dew.wav (lil dicky remix)',
+        title: 'mountain dew (lil dicky dave season 2 lofi hiphop remix demo)',
         artist: 'htrap',
         filename: 'mountainDew.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'remix'
+    },
+    {
+        id: 10,
+        title: 'underwater summer',
+        artist: 'htrap',
+        filename: 'summer.mp3',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'original'
+    },
+    {
+        id: 11,
+        title: 'fresh coats of pain',
+        artist: 'htrap',
+        filename: 'freshCoatsOfPain.mp3',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'original'
+    },
+    {
+        id: 12,
+        title: 'chose [bikini bottom - ice spice (verse one remix)]',
+        artist: 'htrap',
+        filename: 'chose.mp3',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'remix'
+    },
+    {
+        id: 13,
+        title: 'spycraft (not playboi carti or pierre bourne type beat)',
+        artist: 'htrap',
+        filename: 'spycraft.mp3',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'original'
+    },
+    {
+        id: 14,
+        title: 'red sprite (playboi carti "cancun" remake)',
+        artist: 'htrap',
+        filename: 'sprite.mp3',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'remix'
+    },
+    {
+        id: 15,
+        title: 'a shaky lead',
+        artist: 'htrap',
+        filename: 'lead.mp3',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'original'
+    },
+    {
+        id: 16,
+        title: 'nautilus (what\'s next by drake remade)',
+        artist: 'htrap',
+        filename: 'nautilus.mp3',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'remix'
     }
+
 
     // ... Add more tracks as needed
 ];
