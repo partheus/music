@@ -27,7 +27,7 @@
   }
 
   .track-item {
-    background: $color--light; // Adjust if you have a specific color or pattern in mind
+    background: $color--lightpink; // Adjust if you have a specific color or pattern in mind
     cursor: pointer;
     transition: all 0.5s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -68,12 +68,12 @@
     p {
       color: $color--secondary; // Enforce a consistent color for the artist name
       font-size: 1.1rem; // Keep the font size consistent
-      margin-top: 0.5em;
+      margin-top: 0.35em;
     }
   }
 
   .currently-playing {
     outline: 3px solid $color--success;
-    filter: contrast(1.2);
+    filter: contrast(1.8);
   }
 }
