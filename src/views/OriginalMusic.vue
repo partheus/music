@@ -1,6 +1,6 @@
 <template>
   <div class="music-container">
-    <h2>Original Music</h2>
+    <h1>Original Music</h1>
     <ul class="track-list">
       <li v-for="track in tracks" :key="track.id"
           :class="{ 'currently-playing': track.id === currentlyPlayingId }"

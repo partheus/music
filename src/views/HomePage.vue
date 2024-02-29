@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h1>musique!</h1>
-    <p>Navigate to the pages and play some music</p>
+    <h1>Musique!</h1>
+    <small>Navigate to the pages and play some music. Volume control is available on all pages. This site is under construction.</small>
     <br>
-    <small>Volume control is available on all pages. This site is under construction.</small>
     <br>
     [a project by Parth Shiralkar]
     <br>
