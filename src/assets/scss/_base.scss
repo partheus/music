@@ -8,12 +8,18 @@ body {
   font-size: 120%;
 
   @media (min-width: 768px) {
-    margin: 0 20px;
+    margin: 0 2em;
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   color: $color--primary;
+  line-height: 1.1;
+}
+
+h4, h5, h6 {
+  color: $color--tertiary;
+  line-height: 1.1;
 }
 
 a {
@@ -28,14 +34,13 @@ a {
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $color--secondary;
   margin-top: 1em;
   font-size: 126%;
-  margin-bottom: 150px;
+  margin-bottom: 27vh;
 }
 
 // ::after element to show end of #app content
@@ -82,9 +87,9 @@ nav ul {
 
 /* Additional styles can go here */
 .volume-control {
-  border: 2px solid $color--lightpink;
+  border: 2px solid $color--tertiary;
   text-align: center; /* Center the slider if needed */
-  padding: 0 1em;
+  padding: 0.5em;
   width: fit-content;
   margin: 1em auto 0;
 }
@@ -92,7 +97,7 @@ nav ul {
 /* You can style the slider here */
 #volume-slider[type="range"] {
   /* Slider styling */
-  width: 180px;
+  width: 15em;
   margin: 1em;
 }
 
