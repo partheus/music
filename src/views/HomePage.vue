@@ -4,9 +4,8 @@
     <small>Navigate to the pages and play some music. Volume control is available on all pages. This site is under construction.</small>
     <br>
     <br>
-    [a project by Parth Shiralkar]
-    <br>
-    visit <a href="https://parth.ninja" title="Main site of Parth Shiralkar" target="_blank">main site</a>
+    [a project by <a href="https://parth.ninja" title="Main site of Parth Shiralkar" target="_blank">Parth Shiralkar</a>]
+
     <!-- Other content for Home page -->
   </div>
 </template>
