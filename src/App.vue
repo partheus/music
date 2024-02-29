@@ -20,6 +20,13 @@
 
   <div>
     <router-view/>
+    <div class="music-bars">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <persistent-player :volume="volume" />
   </div>
 
