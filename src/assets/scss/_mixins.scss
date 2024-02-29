@@ -5,3 +5,8 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+// color mixin
+@mixin color($color) {
+  color: $color;
+}
