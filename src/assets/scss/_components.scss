@@ -18,7 +18,9 @@
 
   .track-info {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 
   .track-cover {
@@ -100,6 +102,27 @@
 
 .not-found p {
   font-size: 2em;
+}
+
+.homepage-links {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+
+  a {
+    padding: 0.5em 1em;
+    background-color: $color--tertiary;
+    color: $color--light;
+    border-radius: 0.75em;
+    text-decoration: none;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: $color--success;
+      color: $color--dark;
+    }
+  }
 }
 
 // Music bars for the visualizer
