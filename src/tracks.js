@@ -5,9 +5,9 @@ const trackData = [
         title: 'daft.wav',
         artist: 'htrap',
         filename: 'daft.wav',
-        // You can require cover images here as webpack processes them fine statically
         cover: require('@/assets/album-art.png'),
-        type: 'original'
+        type: 'original',
+        duration: '01:44'
     },
     {
         id: 2,
@@ -15,7 +15,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'funkjam.wav',
         cover: require('@/assets/album-art/9e8e9e.png'),
-        type: 'original'
+        type: 'original',
+        duration: '01:17'
     },
     {
         id: 3,
@@ -23,7 +24,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'bday.wav',
         cover: require('@/assets/album-art/520b22.png'),
-        type: 'original'
+        type: 'original',
+        duration: '01:40'
     },
     {
         id: 4,
@@ -31,7 +33,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'synthpop.wav',
         cover: require('@/assets/album-art/520b51.png'),
-        type: 'original'
+        type: 'original',
+        duration: '01:16'
     },
     {
         id: 5,
@@ -39,7 +42,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'janglebop.wav',
         cover: require('@/assets/album-art/f095f0.png'),
-        type: 'original'
+        type: 'original',
+        duration: '01:48'
     },
     {
         id: 6,
@@ -47,7 +51,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'wavyexport.wav',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'original'
+        type: 'original',
+        duration: '01:30'
     },
     {
         id: 7,
@@ -55,7 +60,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'chronic.wav',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'remix'
+        type: 'remix',
+        duration: '01:23'
     },
     {
         id: 8,
@@ -63,7 +69,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'ports.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'remix'
+        type: 'remix',
+        duration: '01:59'
     },
     {
         id: 9,
@@ -71,7 +78,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'mountainDew.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'remix'
+        type: 'remix',
+        duration: '01:46'
     },
     {
         id: 10,
@@ -79,7 +87,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'summer.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'original'
+        type: 'original',
+        duration: '01:39'
     },
     {
         id: 11,
@@ -87,7 +96,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'freshCoatsOfPain.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'original'
+        type: 'original',
+        duration: '01:52'
     },
     {
         id: 12,
@@ -95,7 +105,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'chose.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'remix'
+        type: 'remix',
+        duration: '01:20'
     },
     {
         id: 13,
@@ -103,7 +114,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'spycraft.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'original'
+        type: 'original',
+        duration: '01:16'
     },
     {
         id: 14,
@@ -111,7 +123,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'sprite.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'remix'
+        type: 'remix',
+        duration: '01:47'
     },
     {
         id: 15,
@@ -119,7 +132,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'lead.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'original'
+        type: 'original',
+        duration: '01:43'
     },
     {
         id: 16,
@@ -127,7 +141,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'nautilus.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'remix'
+        type: 'remix',
+        duration: '02:52'
     },
     {
         id: 17,
@@ -135,7 +150,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'retale.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'original'
+        type: 'original',
+        duration: '01:15'
     },
     {
         id: 18,
@@ -143,7 +159,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'freefall.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'remix'
+        type: 'remix',
+        duration: '02:03'
     },
     {
         id: 19,
@@ -151,7 +168,8 @@ const trackData = [
         artist: 'htrap',
         filename: 'grocery.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
-        type: 'original'
+        type: 'original',
+        duration: '01:48'
     }
 
 
