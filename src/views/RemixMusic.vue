@@ -4,13 +4,15 @@
     <ul class="track-list">
       <li v-for="track in tracks" :key="track.id"
           :class="{ 'currently-playing': track.id === currentlyPlayingId }"
-          @click="selectTrack(track)" class="track-item">        <div class="track-info">
-          <img :src="track.cover" :alt="`${track.title} cover`" class="track-cover">
+          @click="selectTrack(track)" class="track-item">
+        <div class="track-info">
+<!--          <img :src="track.cover" :alt="`${track.title} cover`" class="track-cover">-->
           <div class="track-details">
             <h3>{{ track.title }}</h3>
             <p>{{ track.artist }}</p>
           </div>
         </div>
+        <div class="track-duration">{{ track.duration }}</div>
       </li>
     </ul>
   </div>
