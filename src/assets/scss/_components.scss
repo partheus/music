@@ -11,7 +11,6 @@
     height: auto; // Adjust if you want a scrolling list or full-height
     overflow-y: auto; // Only show scrollbar if the content overflows
     padding: 1em 0.5em;
-    background-color: $color--pistachio;
     border-radius: 0.5em;
 
     @media (min-width: 768px) {
