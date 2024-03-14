@@ -1,5 +1,97 @@
 @import 'variables';
 
+// container for the music list
+.music-container {
+  .track-list {
+    display: grid;
+    grid-template-columns: 1fr; // Start with a single column
+    gap: 1em;
+    list-style: none;
+    margin: 1em auto;
+    height: auto; // Adjust if you want a scrolling list or full-height
+    overflow-y: auto; // Only show scrollbar if the content overflows
+    padding: 1em 0.5em;
+    background-color: $color--pistachio;
+    border-radius: 0.5em;
+
+    @media (min-width: 768px) {
+      // Define two columns above 768px
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 80vw;
+      gap: 1.5em;
+      padding: 1em 2em;
+    }
+
+    @media (min-width: 1024px) {
+      // Define three columns above 1024px
+      max-width: 70vw;
+      gap: 1.5em 2em;
+      padding: 1em 3em;
+    }
+    // Continue with additional breakpoints as needed
+  }
+
+  .track-item {
+    background: $color--lightpink; // Adjust if you have a specific color or pattern in mind
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 0.81em;
+    border-radius: 0.5em;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    min-height: fit-content;
+
+    &:hover {
+      box-shadow: 0 0 11px rgba(0, 0, 0, 0.5);
+      transition: all 0.5s ease;
+    }
+  }
+
+  .track-cover {
+    width: 180px; // Specific size for cover images; adjust as needed
+    height: 80px; // Make equal to width for a square aspect ratio
+    object-fit: cover;
+    margin-right: 1em;
+    display: none;
+  }
+
+  .track-details {
+    // Keep your text styles here
+
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h3 {
+      color: $color--dark;
+      font-weight: bold;
+      font-size: 1.65rem; // Keep the font size consistent
+      line-height: 1.05;
+    }
+
+    p {
+      color: $color--secondary; // Enforce a consistent color for the artist name
+      font-size: 1.1rem; // Keep the font size consistent
+      margin-top: 0.25em;
+    }
+  }
+
+  .track-duration {
+    color: $color--dark;
+    font-size: 1.1rem;
+    margin-left: auto;
+    align-self: flex-start;
+    padding-left: 1em;
+  }
+
+  .currently-playing {
+    background-color: $color--success;
+  }
+}
+
 // Persistent player at the bottom of the screen
 .persistent-player {
   position: fixed;
@@ -81,24 +173,29 @@
   }
 }
 
+// featured track styles
+.featured-track {
+  color: $color--dark;
+}
+
 // 404 page styles
 .not-found {
   text-align: center;
-}
 
-.not-found-image {
-  display: block;
-  margin: 0 auto 1em;
-  width: auto;
-  max-height: 40vh;
-}
+  h1 {
+    font-size: 4em;
+  }
 
-.not-found h1 {
-  font-size: 4em;
-}
+  p {
+    font-size: 2em;
+  }
 
-.not-found p {
-  font-size: 2em;
+  .not-found-image {
+    display: block;
+    margin: 0 auto 1em;
+    width: auto;
+    max-height: 40vh;
+  }
 }
 
 .homepage-links {
@@ -106,20 +203,50 @@
   justify-content: center;
   gap: 1em;
   margin-top: 1em;
+}
 
-  a {
-    padding: 0.5em 1em;
+//button styles
+.button {
+  padding: 0.5em 1em;
+  border-radius: 0.75em;
+  text-decoration: none;
+  transition: all 0.4s ease;
+
+  &--primary {
     background-color: $color--tertiary;
-    color: $color--light;
-    border-radius: 0.75em;
-    text-decoration: none;
-    transition: all 0.4s ease;
+    color: $color--success;
 
     &:hover {
       background-color: $color--success;
-      color: $color--dark;
+      color: $color--tertiary;
     }
   }
+
+  &--secondary {
+    background-color: $color--secondary;
+    color: $color--lightpink;
+
+    &:hover {
+      background-color: $color--lightpink;
+      color: $color--secondary;
+    }
+  }
+}
+
+// volume slider
+.volume-control {
+  border: 2px solid $color--tertiary;
+  text-align: center; /* Center the slider if needed */
+  padding: 0.5em;
+  width: fit-content;
+  margin: 1em auto 0;
+}
+
+/* You can style the slider here */
+#volume-slider[type="range"] {
+  /* Slider styling */
+  width: 15em;
+  margin: 1em;
 }
 
 // Music bars for the visualizer
@@ -138,16 +265,36 @@
     background-color: $color--lightpink; // Color of the bars
     animation: animateBar 2s infinite ease-in-out alternate;
 
-    &:nth-child(1) { animation-delay: -0.6s; }
-    &:nth-child(2) { animation-delay: -0.4s; }
-    &:nth-child(3) { animation-delay: -0.2s; }
-    &:nth-child(4) { animation-delay: initial; }
-    &:nth-child(5) { animation-delay: -0.2s; }
+    &:nth-child(1) {
+      animation-delay: -0.6s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: -0.4s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: -0.2s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: initial;
+    }
+
+    &:nth-child(5) {
+      animation-delay: -0.2s;
+    }
   }
 }
 
 @keyframes animateBar {
-  0% { height: 20%; }
-  50% { height: 100%; }
-  100% { height: 20%; }
+  0% {
+    height: 20%;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 20%;
+  }
 }

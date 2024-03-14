@@ -1,92 +1,81 @@
 @import "variables";
 
-.music-container {
-  .track-list {
-    display: grid;
-    grid-template-columns: 1fr; // Start with a single column
-    gap: 1em;
-    list-style: none;
-    margin: 1em auto;
-    height: auto; // Adjust if you want a scrolling list or full-height
-    overflow-y: auto; // Only show scrollbar if the content overflows
-    padding: 1em 0.5em;
-    background-color: $color--pistachio;
-    border-radius: 0.5em;
+/* Add styling for your navigation menu here */
+nav {
+  display: flex;
+}
 
-    @media (min-width: 768px) {
-      // Define two columns above 768px
-      grid-template-columns: repeat(2, 1fr);
-      max-width: 80vw;
-      gap: 1.5em;
-      padding: 1em 2em;
-    }
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  column-gap: 1em;
+  row-gap: 0.25em;
+  flex-wrap: wrap;
+  justify-self: center;
 
-    @media (min-width: 1024px) {
-      // Define three columns above 1024px
-      max-width: 70vw;
-      gap: 1.5em 2em;
-      padding: 1em 3em;
-    }
-    // Continue with additional breakpoints as needed
-  }
-
-  .track-item {
-    background: $color--lightpink; // Adjust if you have a specific color or pattern in mind
-    cursor: pointer;
-    transition: all 0.5s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 0.81em;
-    border-radius: 0.5em;
-    text-align: left;
+  a {
+    text-decoration: none;
+    font-variant: all-petite-caps;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.4s ease;
     display: flex;
-    align-items: flex-start;
-    min-height: fit-content;
-
-    &:hover {
-      box-shadow: 0 0 11px rgba(0, 0, 0, 0.5);
-      transition: all 0.5s ease;
-    }
+    flex-direction: column;
+    width: max-content;
+    border-bottom: 2px solid transparent;
   }
 
-  .track-cover {
-    width: 180px; // Specific size for cover images; adjust as needed
-    height: 80px; // Make equal to width for a square aspect ratio
-    object-fit: cover;
-    margin-right: 1em;
-    display: none;
+  a:hover {
+    color: $color--tertiary;
+    filter: contrast(1.2);
+    border-bottom: 2px solid $color--primary;
   }
 
-  .track-details {
-    // Keep your text styles here
-
-    h3,
-    p {
-      margin: 0;
-    }
-
-    h3 {
-      color: $color--dark;
-      font-weight: bold;
-      font-size: 1.65rem; // Keep the font size consistent
-      line-height: 1.05;
-    }
-
-    p {
-      color: $color--secondary; // Enforce a consistent color for the artist name
-      font-size: 1.1rem; // Keep the font size consistent
-      margin-top: 0.25em;
-    }
+  a.router-link-active {
+    border-bottom: 2px solid $color--tertiary;
+    color: $color--secondary;
   }
 
-  .track-duration {
-    color: $color--dark;
-    font-size: 1.1rem;
-    margin-left: auto;
-    align-self: flex-start;
-    padding-left: 1em;
-  }
-
-  .currently-playing {
-    background-color: $color--success;
+  a.router-link-active:hover {
+    color: $color--tertiary;
   }
 }
+
+
+.colophon {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1em auto 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 25vw;
+    }
+  }
+
+  li {
+    margin-bottom: 0.85em;
+    line-height: 1;
+    border-left: 7px solid $color--primary;
+    padding: 0.25em 0.5em;
+    text-align: left;
+  }
+
+  blockquote {
+    margin: 0;
+    padding-top: 0.42em;
+    font-size: 0.6em;
+    font-style: italic;
+    color: $color--tertiary;
+  }
+}
+
