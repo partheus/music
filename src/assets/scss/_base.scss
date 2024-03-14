@@ -38,9 +38,13 @@ a {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $color--secondary;
-  margin-top: 1em;
-  font-size: 117%;
-  margin-bottom: 27vh;
+  margin: 1em auto 27vh;
+  font-size: 114%;
+
+  @media (min-width: 768px) {
+    max-width: 80%;
+
+  }
 
   h1 {
     font-size: 2em;

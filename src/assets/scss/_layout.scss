@@ -68,6 +68,8 @@ nav ul {
     border-left: 7px solid $color--primary;
     padding: 0.25em 0.5em;
     text-align: left;
+    width: fit-content;
+    text-wrap: none;
   }
 
   blockquote {
