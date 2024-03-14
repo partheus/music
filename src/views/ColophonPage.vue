@@ -20,6 +20,9 @@
       <li>\(^_^)/
         <blockquote>~ <a href="https://parth.ninja" title="Main site of Parth Shiralkar" target="_blank">Parth Shiralkar</a></blockquote>
       </li>
+      <li>"Phrasing!"
+        <blockquote>~ Sterling Archer</blockquote>
+      </li>
     </ul>
   </div>
 </template>
