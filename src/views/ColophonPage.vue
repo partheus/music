@@ -12,7 +12,7 @@
       <li>Hosted on Netlify
         <blockquote>~ with continuous deployment from GitHub</blockquote>
       </li>
-      <li>All music created by Parth Shiralkar&copy;
+      <li>All music created by Parth Shiralkar&copy; for FUN and NOT MONEY
         <blockquote>~ where used, samples and vocals are specified in the track details</blockquote></li>
       <li>Test <router-link to="/not-a-link">404 Error Page</router-link>
         <blockquote>~ because why not?</blockquote>
