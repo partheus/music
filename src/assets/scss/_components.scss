@@ -76,9 +76,7 @@
   }
 
   .seek-bar::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    background: pink; /* Color of the thumb */
+    background: $color--tertiary;
     /* ... other styles such as width, height, etc. ... */
   }
 }
@@ -97,7 +95,6 @@
 
 .not-found h1 {
   font-size: 4em;
-  margin: 0;
 }
 
 .not-found p {

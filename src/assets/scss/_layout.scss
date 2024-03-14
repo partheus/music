@@ -87,7 +87,6 @@
   }
 
   .currently-playing {
-    outline: 3px solid $color--success;
-    filter: contrast(1.8);
+    background-color: $color--success;
   }
 }
