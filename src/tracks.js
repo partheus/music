@@ -170,6 +170,42 @@ const trackData = [
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original',
         duration: '01:48'
+    },
+    {
+        id: 20,
+        title: 'busy beets',
+        artist: 'htrap',
+        filename: 'busy_beets.mp3',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'original',
+        duration: '02:02'
+    },
+    {
+        id: 21,
+        title: 'general grievances',
+        artist: 'htrap',
+        filename: 'general_grievances.mp3',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'original',
+        duration: '01:35'
+    },
+    {
+        id: 22,
+        title: 'unidentified fly object',
+        artist: 'htrap',
+        filename: 'unidentified_fly_object.mp3',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'original',
+        duration: '01:52'
+    },
+    {
+        id: 23,
+        title: 'cursory purple',
+        artist: 'htrap',
+        filename: 'cursory_purple.mp3',
+        cover: require('@/assets/album-art/ffffff.png'),
+        type: 'original',
+        duration: '01:43'
     }
 
 
