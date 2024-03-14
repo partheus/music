@@ -4,7 +4,7 @@
       <img :src="currentTrack.cover" alt="Track cover" class="track-cover">
       <div class="track-details">
         <h4>{{ currentTrack.title }}</h4>
-        <p>{{ currentTrack.artist }}</p>
+        <p>{{ currentTrack.duration }}</p>
       </div>
     </div>
     <div v-else class="no-track">
