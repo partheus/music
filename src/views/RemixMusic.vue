@@ -1,6 +1,7 @@
 <template>
   <div class="music-container">
     <h1>Remix Music</h1>
+    <h4>Featured track: <span class="featured-track">Nautilus ("What's Next" by Drake Remix)</span></h4>
     <ul class="track-list">
       <li v-for="track in tracks" :key="track.id"
           :class="{ 'currently-playing': track.id === currentlyPlayingId }"
