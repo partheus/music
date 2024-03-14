@@ -4,7 +4,7 @@
     <h4>An inscription placed usually at the end of a book, giving facts about its publication.</h4>
     <ul>
       <li>Site designed and developed by Parth Shiralkar
-        <blockquote>~ with HTML, CSS, Love, Death, Robots, the Extraordinary Art of Napping Soundly</blockquote>
+        <blockquote>~ with HTML, CSS, Love, Fun, the Extraordinary Art of Napping Soundly, Vue and stuff</blockquote>
       </li>
       <li>Powered by Vue.js
         <blockquote>~ with Vue Router and Vuex</blockquote>
