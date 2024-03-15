@@ -38,6 +38,22 @@ const routes = [
         },
     },
     {
+        path: '/wip',
+        name: 'WIP',
+        component: () => import('../views/WorkInProgress.vue'),
+        meta: {
+            title: 'Work in Progress | hTrap',
+        },
+    },
+    {
+        path: '/about',
+        name: 'About',
+        component: () => import('../views/AboutPage.vue'),
+        meta: {
+            title: 'About | hTrap',
+        },
+    },
+    {
         path: '/:catchAll(.*)*', // This will match all routes that are not matched by other route records
         name: 'NotFound',
         component: NotFound,
