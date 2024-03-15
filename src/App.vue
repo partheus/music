@@ -6,7 +6,7 @@
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/originals">Originals</router-link></li>
         <li><router-link to="/remixes">Remixes</router-link></li>
-        <li><router-link to="/colophon">Colophon</router-link></li>
+        <li><router-link to="/wip">Work in Progress</router-link></li>
         <!-- Add more navigation links as needed -->
       </ul>
     </nav>
