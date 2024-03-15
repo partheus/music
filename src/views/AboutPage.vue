@@ -10,6 +10,10 @@
       an old Akai MIDI controller and Fruity Loops. I am not a professional musician, and I do not make a living from my
       music. I make music because it's thoroughly fun.</p>
 
+    <p>
+      There is no professionally mixed and mastered music on this site. I've done my best to make the music sound good; I'm learning as I go.
+    </p>
+
     <p>Feel free to navigate to the
       <router-link to="/originals">Original Music</router-link>
       and
