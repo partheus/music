@@ -5,7 +5,7 @@
   .track-list {
     display: grid;
     grid-template-columns: 1fr; // Start with a single column
-    gap: 1em;
+    gap: 1.5em;
     list-style: lower-greek;
     margin: 1em auto;
     height: auto; // Adjust if you want a scrolling list or full-height
@@ -15,7 +15,6 @@
     background-color: $color--pistachio; // Adjust if you have a specific color or pattern in mind
 
     @media (min-width: 880px) {
-      // Define two columns above 880px
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -209,6 +208,37 @@
   gap: 1em;
   margin-top: 1em;
   flex-wrap: wrap;
+}
+
+// wip project styles
+.wip-project {
+  text-align: center;
+  margin: 1em auto 2em;
+  padding: 1em;
+  border: 2px solid $color--tertiary;
+  border-radius: 0.5em;
+  background-color: $color--lightpink;
+  color: $color--dark;
+  font-weight: bold;
+  transition: all 0.4s ease;
+
+  @media screen and (min-width: 768px) {
+    max-width: 50vw;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+
+    @media screen and (min-width: 768px) {
+      max-width: 30vw;
+    }
+  }
+
+  p {
+    margin: 0 0 0.5em;
+  }
 }
 
 //button styles
