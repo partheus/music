@@ -6,6 +6,10 @@
       <li>Site designed and developed by Parth Shiralkar
         <blockquote>~ with HTML, CSS, Love, Fun, the Extraordinary Art of Napping Soundly, Vue and stuff</blockquote>
       </li>
+      <li>Typeface: <a href="https://store.naipe.xyz/fonts/gabarito" title="Gabarito Naipe Font" target="_blank">Gabarito</a>
+        <blockquote>~ by <a href="https://lebassis.com/about" target="_blank">Leandro Assis</a></blockquote>
+
+      </li>
       <li>Powered by Vue.js
         <blockquote>~ with Vue Router and Vuex</blockquote>
       </li>
