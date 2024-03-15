@@ -6,26 +6,23 @@
     display: grid;
     grid-template-columns: 1fr; // Start with a single column
     gap: 1em;
-    list-style: none;
+    list-style: lower-greek;
     margin: 1em auto;
     height: auto; // Adjust if you want a scrolling list or full-height
     overflow-y: auto; // Only show scrollbar if the content overflows
     padding: 1em 0.5em;
     border-radius: 0.5em;
+    background-color: $color--pistachio; // Adjust if you have a specific color or pattern in mind
 
-    @media (min-width: 768px) {
-      // Define two columns above 768px
+    @media (min-width: 880px) {
+      // Define two columns above 880px
       grid-template-columns: repeat(2, 1fr);
-      max-width: 80vw;
-      gap: 1.5em;
-      padding: 1em 2em;
     }
 
     @media (min-width: 1024px) {
-      // Define three columns above 1024px
       max-width: 70vw;
-      gap: 1.5em 2em;
-      padding: 1em 3em;
+      gap: 2em;
+      padding: 1.5em 3em;
     }
     // Continue with additional breakpoints as needed
   }
@@ -33,9 +30,9 @@
   .track-item {
     background: $color--lightpink; // Adjust if you have a specific color or pattern in mind
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 0.81em;
+    padding: 0.81em 0.81em 0.81em 1.65em;
     border-radius: 0.5em;
     text-align: left;
     display: flex;
@@ -44,7 +41,7 @@
 
     &:hover {
       box-shadow: 0 0 11px rgba(0, 0, 0, 0.5);
-      transition: all 0.5s ease;
+      transition: all 0.4s ease;
     }
   }
 
@@ -62,6 +59,7 @@
     h3,
     p {
       margin: 0;
+      padding-left: 0.15em;
     }
 
     h3 {
@@ -69,6 +67,13 @@
       font-weight: bold;
       font-size: 1.65rem; // Keep the font size consistent
       line-height: 1.05;
+      display: list-item;
+    }
+
+    h3::marker {
+      color: $color--primary;
+      font-weight: normal;
+      font-size: 0.75em;
     }
 
     p {
@@ -129,10 +134,11 @@
   }
 
   .track-details {
-    border-left: 7px solid $color--tertiary;
-    padding-left: 1em;
-    border-right: 7px solid $color--tertiary;
-    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
   }
 
   .controls {
@@ -228,6 +234,16 @@
     &:hover {
       background-color: $color--lightpink;
       color: $color--secondary;
+    }
+  }
+
+  &--tertiary {
+    background-color: $color--primary;
+    color: $color--lightpink;
+
+    &:hover {
+      background-color: $color--light;
+      color: $color--primary;
     }
   }
 }
