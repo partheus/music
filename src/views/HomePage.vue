@@ -6,17 +6,11 @@
     <div class="homepage-links">
       <router-link to="/originals" title="Original Music" class="button button--primary">Original Music</router-link>
       <router-link to="/remixes" title="Remixes" class="button button--primary">Remixes</router-link>
+      <router-link to="/about" title="About" class="button button--secondary">About</router-link>
     </div>
 
     <p>a project by [<router-link to="/colophon">Parth Shiralkar</router-link>], also
     known as hTrap</p>
-
-    <div class="homepage-links">
-      <router-link to="/about" title="About" class="button button--secondary">About</router-link>
-      <router-link to="/not-a-link" title="404 Error Page" class="button button--secondary">Test 404 Error Page</router-link>
-    </div>
-
-
 
     <!-- Other content for Home page -->
   </div>
