@@ -7,7 +7,8 @@ const trackData = [
         filename: 'daft.wav',
         cover: require('@/assets/album-art.png'),
         type: 'original',
-        duration: '01:44'
+        duration: '01:44',
+        genre: 'synthpop'
     },
     {
         id: 2,
@@ -16,7 +17,8 @@ const trackData = [
         filename: 'funkjam.wav',
         cover: require('@/assets/album-art/9e8e9e.png'),
         type: 'original',
-        duration: '01:17'
+        duration: '01:17',
+        genre: 'funk'
     },
     {
         id: 3,
@@ -25,7 +27,8 @@ const trackData = [
         filename: 'bday.wav',
         cover: require('@/assets/album-art/520b22.png'),
         type: 'original',
-        duration: '01:40'
+        duration: '01:40',
+        genre: 'lofi demo'
     },
     {
         id: 4,
@@ -34,7 +37,8 @@ const trackData = [
         filename: 'synthpop.wav',
         cover: require('@/assets/album-art/520b51.png'),
         type: 'original',
-        duration: '01:16'
+        duration: '01:16',
+        genre: 'synthpop'
     },
     {
         id: 5,
@@ -43,7 +47,8 @@ const trackData = [
         filename: 'janglebop.wav',
         cover: require('@/assets/album-art/f095f0.png'),
         type: 'original',
-        duration: '01:48'
+        duration: '01:48',
+        genre: 'trap'
     },
     {
         id: 6,
@@ -52,7 +57,8 @@ const trackData = [
         filename: 'wavyexport.wav',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original',
-        duration: '01:30'
+        duration: '01:30',
+        genre: 'drum and bass'
     },
     {
         id: 7,
@@ -61,7 +67,8 @@ const trackData = [
         filename: 'chronic.wav',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'remix',
-        duration: '01:23'
+        duration: '01:23',
+        genre: 'trap'
     },
     {
         id: 8,
@@ -70,7 +77,8 @@ const trackData = [
         filename: 'ports.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'remix',
-        duration: '01:59'
+        duration: '01:59',
+        genre: 'trap'
     },
     {
         id: 9,
@@ -79,7 +87,8 @@ const trackData = [
         filename: 'mountainDew.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'remix',
-        duration: '01:46'
+        duration: '01:46',
+        genre: 'lofi'
     },
     {
         id: 10,
@@ -88,7 +97,8 @@ const trackData = [
         filename: 'summer.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original',
-        duration: '01:39'
+        duration: '01:39',
+        genre: 'trap'
     },
     {
         id: 11,
@@ -97,7 +107,8 @@ const trackData = [
         filename: 'freshCoatsOfPain.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original',
-        duration: '01:52'
+        duration: '01:52',
+        genre: 'trap'
     },
     {
         id: 12,
@@ -106,7 +117,8 @@ const trackData = [
         filename: 'chose.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'remix',
-        duration: '01:20'
+        duration: '01:20',
+        genre: 'trap'
     },
     {
         id: 13,
@@ -115,7 +127,8 @@ const trackData = [
         filename: 'spycraft.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original',
-        duration: '01:16'
+        duration: '01:16',
+        genre: 'trap'
     },
     {
         id: 14,
@@ -124,7 +137,8 @@ const trackData = [
         filename: 'sprite.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'remix',
-        duration: '01:47'
+        duration: '01:47',
+        genre: 'trap'
     },
     {
         id: 15,
@@ -133,7 +147,8 @@ const trackData = [
         filename: 'lead.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original',
-        duration: '01:43'
+        duration: '01:43',
+        genre: 'trap'
     },
     {
         id: 16,
@@ -142,7 +157,8 @@ const trackData = [
         filename: 'nautilus.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'remix',
-        duration: '02:52'
+        duration: '02:52',
+        genre: 'trap'
     },
     {
         id: 17,
@@ -151,7 +167,8 @@ const trackData = [
         filename: 'retale.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original',
-        duration: '01:15'
+        duration: '01:15',
+        genre: 'trap'
     },
     {
         id: 18,
@@ -160,7 +177,8 @@ const trackData = [
         filename: 'freefall.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'remix',
-        duration: '02:03'
+        duration: '02:03',
+        genre: 'drum and bass'
     },
     {
         id: 19,
@@ -169,7 +187,8 @@ const trackData = [
         filename: 'grocery.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original',
-        duration: '01:48'
+        duration: '01:48',
+        genre: 'trap'
     },
     {
         id: 20,
@@ -178,7 +197,8 @@ const trackData = [
         filename: 'busy_beets.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original',
-        duration: '02:02'
+        duration: '02:02',
+        genre: 'drum and bass'
     },
     {
         id: 21,
@@ -187,7 +207,8 @@ const trackData = [
         filename: 'general_grievances.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original',
-        duration: '01:35'
+        duration: '01:35',
+        genre: 'trap'
     },
     {
         id: 22,
@@ -196,7 +217,8 @@ const trackData = [
         filename: 'unidentified_fly_object.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original',
-        duration: '01:52'
+        duration: '01:52',
+        genre: 'trap'
     },
     {
         id: 23,
@@ -205,7 +227,8 @@ const trackData = [
         filename: 'cursory_purple.mp3',
         cover: require('@/assets/album-art/ffffff.png'),
         type: 'original',
-        duration: '01:43'
+        duration: '01:43',
+        genre: 'trap'
     }
 
 
