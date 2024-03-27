@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Work in Progress</h1>
-    <h4>Stuff that is mostly under construction</h4>
+    <h4>Stuff that is mostly under construction. Videos only for now.</h4>
 
     <div class="wip-project">
       <p>A simple drum and bass remix sampling the famous speech by Carl Sagan, "Pale Blue Dot".</p>
